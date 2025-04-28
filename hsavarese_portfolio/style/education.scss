@@ -67,6 +67,15 @@ section strong {
   color: #265ecf;
   font-size: 1.08rem;
 }
+section img {
+  display: block;
+  margin: 0 auto 12px auto;
+  max-width: 120px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(58,122,254,0.10);
+  background: #fff;
+  padding: 6px;
+}
 
 main {
     padding: 2rem;
