@@ -109,3 +109,14 @@ footer a:hover {
 nav a:hover, nav a:focus {
   background: #ffb347;
 }
+
+section img {
+  display: block;
+  margin: 0 auto 12px auto;
+  max-width: 120px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 8px rgba(58, 122, 254, 0.1);
+          box-shadow: 0 2px 8px rgba(58, 122, 254, 0.1);
+  background: #fff;
+  padding: 6px;
+}
