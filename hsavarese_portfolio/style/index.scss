@@ -1,8 +1,12 @@
 $accent: #ffb347;
+$primary: #4f8cff;
+$background: #f0f4f8;
+$text: #2a3a5e;
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f7f9fb;
+  background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+  color: $text;
   margin: 0;
   padding: 0;
 }
@@ -41,11 +45,17 @@ main {
   border-radius: 18px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.08);
   text-align: center;
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 h1 {
   font-size: 2.2rem;
   margin-bottom: 18px;
   color: #3a7afe;
+}
+h2 {
+  border-left: 4px solid #4f8cff;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
 }
 p {
   font-size: 1.15rem;
@@ -69,6 +79,17 @@ footer {
       color: darken($accent, 10%);
       text-decoration: underline;
     }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
   
