@@ -1,6 +1,7 @@
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f7f9fb;
+  background: linear-gradient(120deg, #f0f4f8 0%, #e0e7ef 100%);
+  color: #2a3a5e;
   margin: 0;
   padding: 0;
 }
@@ -8,21 +9,17 @@ body {
 nav {
   background: #3a7afe;
   padding: 0.5rem 0;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 24px;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -32,8 +29,8 @@ nav a {
   font-size: 1.08rem;
   padding: 6px 14px;
   border-radius: 5px;
-  -webkit-transition: background 0.2s;
   transition: background 0.2s;
+  display: inline-block;
 }
 
 nav a:hover, nav a:focus {
@@ -41,77 +38,64 @@ nav a:hover, nav a:focus {
 }
 
 main {
-  max-width: 600px;
+  max-width: 800px;
   margin: 48px auto;
   padding: 32px 28px;
   background: #fff;
   border-radius: 18px;
-  -webkit-box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  width: 90%;
+  box-sizing: border-box;
 }
 
 h2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 1.3rem;
-  margin-top: 32px;
-  margin-bottom: 8px;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 4px solid #4f8cff;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .skills-section {
-  background: #f0f4fa;
-  border-radius: 10px;
-  padding: 18px 20px 10px 20px;
-  margin-bottom: 18px;
-  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  -webkit-transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s;
-  max-height: 500px;
-  opacity: 1;
-  overflow: hidden;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: #f7f9fb;
+  border-radius: 8px;
 }
 
-.hidden {
-  max-height: 0 !important;
-  opacity: 0.1 !important;
-  padding: 0 20px !important;
-  margin-bottom: 0 !important;
-  pointer-events: none;
+.skills-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-section li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e0e7ef;
+}
+
+.skills-section li:last-child {
+  border-bottom: none;
 }
 
 .toggle-btn {
-  background: #ffb347;
-  color: #fff;
+  background: #4f8cff;
+  color: white;
   border: none;
-  border-radius: 6px;
-  padding: 4px 14px;
-  font-size: 0.95rem;
+  padding: 6px 12px;
+  border-radius: 4px;
   cursor: pointer;
-  margin-left: 12px;
-  -webkit-transition: background 0.2s;
+  font-size: 0.9rem;
   transition: background 0.2s;
 }
 
 .toggle-btn:hover {
-  background: #ff9e14;
+  background: #3a7afe;
 }
 
-ul {
-  margin: 0;
-  padding-left: 18px;
-  font-size: 1.08rem;
-}
-
-li {
-  margin-bottom: 7px;
+.hidden {
+  display: none;
 }
 
 footer {
@@ -123,12 +107,142 @@ footer {
   font-size: 1.05rem;
   border-top: 1px solid #e0e7ef;
 }
+
 footer a {
   color: #ffb347;
   text-decoration: none;
   font-weight: 500;
 }
+
 footer a:hover {
   color: #ff9e14;
   text-decoration: underline;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  nav ul {
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    min-width: 80px;
+    text-align: center;
+  }
+
+  main {
+    margin: 24px auto;
+    padding: 24px 20px;
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .toggle-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+
+  .skills-section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-section li {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+  }
+
+  nav a {
+    width: 90%;
+    text-align: center;
+    margin: 2px 0;
+    font-size: 0.9rem;
+  }
+
+  main {
+    margin: 16px auto;
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    gap: 10px;
+  }
+
+  .toggle-btn {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .skills-section {
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .skills-section li {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    padding: 12px 0;
+    margin-top: 32px;
+  }
+
+  footer a {
+    display: inline-block;
+    padding: 4px 0;
+  }
+}
+
+/* Add styles for very small devices */
+@media screen and (max-width: 360px) {
+  nav a {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  main {
+    padding: 16px 12px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .toggle-btn {
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+
+  .skills-section {
+    padding: 0.6rem;
+  }
+
+  .skills-section li {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+  }
 }
