@@ -1,11 +1,11 @@
 [build]
   command = "npm run build"
-  publish = "dist"
+  publish = "hsavarese_portfolio"
 
 [build.environment]
   NODE_VERSION = "18"
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
+  to = "/dist/index.html"
   status = 200 
