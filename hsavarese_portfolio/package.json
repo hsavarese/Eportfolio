@@ -1,0 +1,21 @@
+{
+  "name": "hsavarese-portfolio",
+  "version": "1.0.0",
+  "description": "Hunter Savarese's Portfolio Website",
+  "scripts": {
+    "build": "npm run build:scss && npm run build:ts && node build.js",
+    "build:scss": "sass style:dist/style --style compressed",
+    "build:ts": "tsc",
+    "watch": "concurrently \"npm run watch:scss\" \"npm run watch:ts\"",
+    "watch:scss": "sass style:dist/style --style compressed --watch",
+    "watch:ts": "tsc --watch",
+    "start": "npm run build && live-server dist"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "fs-extra": "^11.2.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.71.1",
+    "typescript": "^5.3.3"
+  }
+} 

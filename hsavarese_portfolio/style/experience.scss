@@ -1,3 +1,10 @@
+@use "sass:color";
+
+$accent: #3a7afe;
+$accent-dark: color.adjust($accent, $lightness: -10%);
+$text: #2a3a5e;
+$background: #f7f9fb;
+
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #f7f9fb;
@@ -28,7 +35,7 @@ nav a {
   transition: background 0.2s;
 }
 nav a:hover, nav a:focus {
-  background: #ffb347;
+  background: $accent;
 }
 
 main {
@@ -67,8 +74,6 @@ p {
   margin-bottom: 0;
 }
 
-$accent: #ffb347;
-
 footer {
   margin-top: 48px;
   padding: 18px 0;
@@ -82,14 +87,10 @@ footer {
     text-decoration: none;
     font-weight: 500;
     &:hover {
-      color: darken($accent, 10%);
+      color: $accent-dark;
       text-decoration: underline;
     }
   }
-}
-
-nav a:hover, nav a:focus {
-  background: $accent;
 }
 
 section img {

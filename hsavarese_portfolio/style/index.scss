@@ -1,6 +1,9 @@
-$accent: #ffb347;
+@use "sass:color";
+
+$accent: #3a7afe;
+$accent-dark: color.adjust($accent, $lightness: -10%);
 $primary: #4f8cff;
-$background: #f0f4f8;
+$background: #f7f9fb;
 $text: #2a3a5e;
 
 body {
@@ -76,7 +79,7 @@ footer {
     text-decoration: none;
     font-weight: 500;
     &:hover {
-      color: darken($accent, 10%);
+      color: $accent-dark;
       text-decoration: underline;
     }
   }

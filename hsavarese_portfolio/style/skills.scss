@@ -1,4 +1,9 @@
-$accent: #ffb347;
+@use "sass:color";
+
+$accent: #3a7afe;
+$accent-dark: color.adjust($accent, $lightness: -10%);
+$text: #2a3a5e;
+$background: #f7f9fb;
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -79,7 +84,7 @@ h2 {
   transition: background 0.2s;
 }
 .toggle-btn:hover {
-  background: darken($accent, 10%);
+  background: $accent-dark;
 }
 ul {
   margin: 0;
@@ -103,7 +108,7 @@ footer {
     text-decoration: none;
     font-weight: 500;
     &:hover {
-      color: darken($accent, 10%);
+      color: $accent-dark;
       text-decoration: underline;
     }
   }
