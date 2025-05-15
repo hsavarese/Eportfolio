@@ -167,4 +167,15 @@ footer {
     padding: 8px 2vw;
   }
 }
+
+// Universal responsive images and containers
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+body, html {
+  width: 100%;
+  overflow-x: hidden;
+}
   
